@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+模板页面
+<span th:text="${username}">vip</span>
+<span th:if="${age>18}">老腊肉</span>
+<span th:if="${age<18}">小腊肉</span>
+<span th:text="${agee>18?'长大了':'未成年'}"></span>
+
+<table>
+    <tr>
+        <td>id</td>
+        <td>姓名</td>
+    </tr>
+    <tr th:each="stu : ${userlist}">
+        <td th:text="${stu.id}">id</td>
+        <td th:text="${stu.name}">姓名</td>
+    </tr>
+</table>
+</body>
+</html>
